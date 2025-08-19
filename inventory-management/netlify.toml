@@ -1,0 +1,15 @@
+# Netlify Configuration
+# This file configures your build settings for Netlify
+
+[build]
+  publish = ".next"
+  command = "bun run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Redirect rules for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

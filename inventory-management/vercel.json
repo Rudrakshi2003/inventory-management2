@@ -1,0 +1,16 @@
+# Vercel Configuration
+# This file optimizes your deployment on Vercel
+
+{
+  "buildCommand": "bun run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "installCommand": "bun install",
+  "devCommand": "bun run dev",
+  "regions": ["auto"],
+  "functions": {
+    "app/**/*.{js,ts,jsx,tsx}": {
+      "maxDuration": 30
+    }
+  }
+}
